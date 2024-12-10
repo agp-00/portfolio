@@ -1,26 +1,32 @@
 import React from 'react';
 import ButtonLink from '../components/ButtonLink';
-import Footer from '../components/Footer';
 
 const Projects = () => {
     const projects = [
         {
             id: 1,
-            imageUrl: 'https://via.placeholder.com/300x200.png?text=Project+1',
+            imageUrl: './img/netflix.png',
         },
         {
             id: 2,
-            imageUrl: 'https://via.placeholder.com/300x200.png?text=Project+2',
+            imageUrl: './img/movies.png',
+        },
+        {
+            id: 3,
+            imageUrl: './img/weather.png',
+        },
+        {
+            id: 4,
+            imageUrl: './img/crypto.png',
         },
     ];
-
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '20px' }}>
             <h1>My Projects</h1>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', width: '100%', maxWidth: '600px' }}>
                 {projects.map((project) => (
-                    <div key={project.id}>
-                        <img src={project.imageUrl} alt={`Project ${project.id}`} />
+                    <div key={project.id} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <img src={project.imageUrl} alt={`Project ${project.id}`} style={{ width: '400px', height: '400px' }} />
                     </div>
                 ))}
             </div>
