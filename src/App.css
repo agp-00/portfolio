@@ -1,5 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Change from center to space-between */
+  min-height: 100vh;
+  padding-top: 60px; /* Adjust this value based on the height of your nav */
+}
+
+.content {
+  flex: 1; /* Ensure the content takes up available space */
+  max-width: 1200px; /* Make the container wider */
+  width: 100%;
 }
 
 .App-logo {
@@ -22,10 +44,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.App-link:hover {
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +64,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem; /* Increase font size */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 0; /* Remove border-radius */
+  transition: color 0.3s ease; /* Change transition to color */
+}
+
+nav a:hover {
+  color: #ddd; /* Change background-color to color */
+}
+
+.button-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.button-link:hover {
+  color: #ddd;
+}
+
+.button-link-home {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button-link-home:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative; /* Remove fixed positioning */
+  bottom: 0;
 }
