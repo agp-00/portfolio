@@ -17,8 +17,8 @@ function App() {
           <ButtonLink to="/">Home</ButtonLink>
           <ButtonLink to="/about">About</ButtonLink>
           <ButtonLink to="/projects">Projects</ButtonLink>
-            <ButtonLink to="/contact">Contact</ButtonLink>
-        </nav>
+          <ButtonLink to="/contact">Contact</ButtonLink>
+          </nav>
         <div className="content">
           <Routes>
             <Route path="/about" element={<About />} />

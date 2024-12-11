@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonLink from '../components/ButtonLink';
 
 const Projects = () => {
     const projects = [
@@ -30,7 +29,6 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            <ButtonLink to="/" className="button-link-home">Volver a la Página Principal</ButtonLink>
         </div>
     );
 };

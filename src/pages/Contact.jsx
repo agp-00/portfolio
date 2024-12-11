@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ const Contact = () => {
         email: '',
         message: ''
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,7 +20,6 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aquí puedes manejar el envío del formulario, por ejemplo, enviarlo a un servidor
         console.log('Form data submitted:', formData);
     };
 
@@ -27,7 +29,7 @@ const Contact = () => {
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (name && email && message) {
             if (emailPattern.test(email)) {
-                window.location.href = '/newsletter';
+                navigate('/NewsLetter');
             } else {
                 alert('Por favor, introduce un correo electrónico válido.');
             }

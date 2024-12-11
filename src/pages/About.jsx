@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonLink from '../components/ButtonLink';
 
 const About = () => {
     return (
@@ -9,7 +8,6 @@ const About = () => {
             <p>I am a [Your Profession] with a passion for [Your Interests].</p>
             <p>In my free time, I enjoy [Your Hobbies].</p>
             <p>Feel free to reach out to me at [Your Email] or connect with me on [Your Social Media].</p>
-            <ButtonLink to="/" className="button-link-home">Volver a la Página Principal</ButtonLink>
         </div>
     );
 };
