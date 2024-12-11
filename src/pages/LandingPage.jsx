@@ -1,6 +1,4 @@
 import React from 'react';
-import ButtonLink from '../components/ButtonLink';
-import Footer from '../components/Footer';
 import '../css/LandingPage.css';
 
 const LandingPage = () => {

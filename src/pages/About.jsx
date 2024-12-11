@@ -1,6 +1,5 @@
 import React from 'react';
 import ButtonLink from '../components/ButtonLink';
-import Footer from '../components/Footer';
 
 const About = () => {
     return (
